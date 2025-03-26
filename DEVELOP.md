@@ -41,7 +41,7 @@
 
 ## How to make a release
 
-1. Open [https://github.com/micro-zoe/micro-app-chrome-plugin/releases](https://github.com/micro-zoe/micro-app-chrome-plugin/releases), click "Draft a new release" button.
+1. Open [https://github.com/jd-opensource/micro-app-chrome-plugin/releases](https://github.com/jd-opensource/micro-app-chrome-plugin/releases), click "Draft a new release" button.
 
 2. Choose a tag or create a new tag. The versioning follows the [Semantic Versioning 2.0.0](https://semver.org/) specification for semantic versioning.
 
