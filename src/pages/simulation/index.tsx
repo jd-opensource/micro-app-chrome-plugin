@@ -102,7 +102,7 @@ class SimulationPage extends React.PureComponent<SimulationPageProps, Simulation
     }],
     jsonInputError: false, // 手动输入的json格式错误
     microAppUrl: '',
-    ver: '1.0', // microApp版本号
+    ver: '0.8', // microApp版本号
   };
 
   private initMicroApp() {
