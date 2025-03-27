@@ -1001,7 +1001,7 @@ class CSSParser {
 
   // splice string
   recordResult(strFragment) {
-    // Firefox performance degradation when string contain special characters, see https://github.com/micro-zoe/micro-app/issues/256
+    // Firefox performance degradation when string contain special characters, see https://github.com/jd-opensource/micro-app/issues/256
     this.result += isFireFox() ? encodeURIComponent(strFragment) : strFragment;
   }
 }
@@ -1929,7 +1929,7 @@ function runCode2InlineScript(address, code, module, scriptElement, attrs, callb
     if (isInlineScript(address)) {
       /**
        * inline module script cannot convert to blob mode
-       * Issue: https://github.com/micro-zoe/micro-app/issues/805
+       * Issue: https://github.com/jd-opensource/micro-app/issues/805
        */
       scriptElement.textContent = code;
     } else {
@@ -2961,7 +2961,7 @@ function createProxyWindow(appName, microAppWindow, sandbox) {
          * Some keywords, such as Vue, need to meet two conditions at the same time:
          * 1. 'Vue' in window --> false
          * 2. Vue (top level variable) // undefined
-         * Issue https://github.com/micro-zoe/micro-app/issues/686
+         * Issue https://github.com/jd-opensource/micro-app/issues/686
          */
         if (sandbox.adapter.staticScopeProperties.includes(key)) {
           return !!target[key];
@@ -4367,7 +4367,7 @@ function fixBabelPolyfill6() {
 }
 /**
  * Fix error of hot reload when parent&child created by create-react-app in development environment
- * Issue: https://github.com/micro-zoe/micro-app/issues/382
+ * Issue: https://github.com/jd-opensource/micro-app/issues/382
  */
 function fixReactHMRConflict(app) {
   let _a;
@@ -4540,7 +4540,7 @@ class WithSandBox {
     this.active = false;
     /**
      * Scoped global Properties(Properties that can only get and set in microAppWindow, will not escape to rawWindow)
-     * Fix https://github.com/micro-zoe/micro-app/issues/234
+     * Fix https://github.com/jd-opensource/micro-app/issues/234
      */
     this.scopeProperties = [];
     // Properties that can be escape to rawWindow
@@ -6729,7 +6729,7 @@ function invokePrototypeMethod(app, rawMethod, parent, targetChild, passiveChild
      *  1. When operate child from parentNode async, may have been unmount
      *    e.g. target.parentNode.remove(target)
      * ISSUE:
-     *  1. https://github.com/micro-zoe/micro-app/issues/739
+     *  1. https://github.com/jd-opensource/micro-app/issues/739
      *    Solution: Return the true value when node not in document
      */
     if (!isIframeSandbox(app.name)
@@ -7100,7 +7100,7 @@ function patchDocument$2() {
     if (!currentAppName
             || !selectors
             || isUniqueElement(selectors)
-            // see https://github.com/micro-zoe/micro-app/issues/56
+            // see https://github.com/jd-opensource/micro-app/issues/56
             || rawDocument !== _this) {
       return globalEnv.rawQuerySelector.call(_this, selectors);
     }
@@ -7652,7 +7652,7 @@ function defineElement(tagName) {
       app.isPrefetch = false;
       /**
        * Fix error when navigate before app.mount by microApp.router.push(...)
-       * Issue: https://github.com/micro-zoe/micro-app/issues/908
+       * Issue: https://github.com/jd-opensource/micro-app/issues/908
        */
       app.setAppState(appStates.BEFORE_MOUNT);
       // exec mount async, simulate the first render scene
