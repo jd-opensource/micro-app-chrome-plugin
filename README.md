@@ -69,9 +69,8 @@
 ## 🤝 参与共建
 
 如果您对这个项目感兴趣，欢迎提[pull request](https://github.com/jd-opensource/micro-app-chrome-plugin/pulls)参与贡献，也欢迎 [Star](https://github.com/jd-opensource/micro-app-chrome-plugin) 支持一下 ^_^
-欢迎小伙伴们加入`Micro-App-DevTools`微信群交流^ ^   
 
-![image](https://github.com/user-attachments/assets/994ae21d-ad4f-47d5-8796-fe0bf892d89c)
+[欢迎小伙伴们加入Micro-App微信群交流^ ^](https://github.com/jd-opensource/micro-app/blob/master/Contact.md)
 
 
 

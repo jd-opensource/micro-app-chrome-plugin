@@ -45,6 +45,11 @@
 
 2. Choose a tag or create a new tag. The versioning follows the [Semantic Versioning 2.0.0](https://semver.org/) specification for semantic versioning.
 
+```bash
+git tag v1.x.x
+git push origin v1.x.x
+```
+
 3. Fill in the version number as the title. Include the update details in the description.
 
 4. Upload the artifacts of the current version as attachments.
