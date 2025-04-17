@@ -23,17 +23,21 @@
 
 可查看`Micro app`的全局变量，目前显示的是最后一次加载的微应用信息，并支持点击具体条目跳转到官方文档说明。
 
-![控制台](https://img14.360buyimg.com/imagetools/jfs/t1/249320/9/3342/57393/65a73e41Fe655b286/feb7e2aa224d0481.jpg)
+![环境变量](https://zeromock.s3.cn-north-1.jdcloud-oss.com/micro-app/environment.png)
 
 ## 2、Communicate通讯
 用于查看页面`Micro app`微应用结构、基本信息，以及模拟发送接收数据。
 左侧展示的是页面微应用的层级结构，可选择对其进行操作。右侧上部显示当前应用的基本信息，包括名称、路由、iframe模式及版本号等信息。还可对其进行高亮标记，方便快速定位。
 所有应用均支持模拟获取数据及发送数据，并可自动储存历史记录。
 
-![通讯](https://img14.360buyimg.com/imagetools/jfs/t1/242631/34/3623/54593/65a73e41Fabc284b6/61d467579d7a922e.jpg)
+![通讯](https://zeromock.s3.cn-north-1.jdcloud-oss.com/micro-app/communicate.png)
 
+## 3、路由信息
+用于查看当前页面路由及MicroApp版本等信息
 
-### 3、子应用开发环境模拟
+![路由](https://zeromock.s3.cn-north-1.jdcloud-oss.com/micro-app/communicate.png)
+
+### 4、子应用开发环境模拟
 点击按钮跳转至功能一中子应用开发环境模拟页面，此处模仿内嵌子应用，使用说明如下所示：
 
 在子应用开发环境模拟页面中输入子页面`URL`等信息
@@ -47,7 +51,7 @@
 
 以上即完成微前端的嵌入，效果如下：
 
-![嵌入页面](https://img10.360buyimg.com/imagetools/jfs/t1/34172/26/15026/142590/646b51afF00535320/d9d0fd6c7b1590cb.png)
+![嵌入页面](https://zeromock.s3.cn-north-1.jdcloud-oss.com/micro-app/sub-app-simulation.png)
 
 #### 快捷打开方式一
 点击右上角图标出现目录,选择"打开子应用开发环境模拟"
