@@ -788,10 +788,11 @@ class Communicate extends React.PureComponent<CommunicateProps, CommunicateState
         children: this.sendDataDOM(),
       });
     }
-    tabItems.push({
-      key: 'openSimulation',
-      label: '此子应用开发环境模拟',
-    });
+    // manifest v3 不支持unsafe-eval,簪无法模拟子应用
+    // tabItems.push({
+    //   key: 'openSimulation',
+    //   label: '此子应用开发环境模拟',
+    // });
     return (
       <Tabs
         size="small"

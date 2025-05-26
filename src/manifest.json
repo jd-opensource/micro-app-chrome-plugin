@@ -1,11 +1,11 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Micro App Developer Tools",
   "short_name": "Sample Extension",
   "description": "A chrome extension for debug micro app project.",
   "homepage_url": "https://github.com/reduxjs/redux-devtools",
   "version": "0.0.1",
-  "browser_action": {
+  "action": {
     "default_popup": "popup-app.html",
     "default_icon": {
       "128": "static/icons/icon-128-disable.png"
@@ -15,7 +15,9 @@
     "128": "static/icons/icon-128.png",
     "256": "static/icons/icon-128-disable.png"
   },
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
   "background": { "service_worker": "js/background-script.bundle.js" },
   "options_page": "options-app.html",
   "content_scripts": [
@@ -26,23 +28,21 @@
     }
   ],
   "devtools_page": "devtools-loader.html",
+  "permissions": [
+    "cookies",
+    "tabs",
+    "contextMenus",
+    "storage",
+    "windows",
+    "activeTab",
+    "system.display",
+    "scripting"
+  ],
   "host_permissions": [
     "*://*.jd.com/"
   ],
-  "permissions": [
-    "cookies",
-    "webRequest",
-    "webRequestBlocking",
-    "http://*/*",
-    "https://*/*",
-    "tabs",
-    "contextMenus",
-    "browser_action",
-    "storage",
-    "devtools",
-    "windows",
-    "activeTab",
-    "system.display"
+  "optional_host_permissions": [
+    "*://*/*"
   ],
   "update_url": "https://clients2.google.com/service/update2/crx"
 }

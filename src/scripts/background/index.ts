@@ -109,7 +109,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab1) => {
       });
     });
     // 6、according to isMicroApp setting iconPath
-    chrome.browserAction.setIcon({ path: isMicroApp ? blueIconPath : grayIconPath, tabId });
+    chrome.action.setIcon({ path: isMicroApp ? blueIconPath : grayIconPath, tabId });
   });
 });
 /**
@@ -123,9 +123,9 @@ chrome.tabs.onActivated.addListener((changeInfo) => {
       logger.debug(`change tab value currently is ${JSON.stringify(result)}`);
       const data = JSON.parse(JSON.stringify(result));
       logger.debug('isMicroApp', data[`${changeInfo.tabId}`]);
-      chrome.browserAction.setIcon({ path: data[`${changeInfo.tabId}`] ? blueIconPath : grayIconPath, tabId: changeInfo.tabId });
+      chrome.action.setIcon({ path: data[`${changeInfo.tabId}`] ? blueIconPath : grayIconPath, tabId: changeInfo.tabId });
     } else {
-      chrome.browserAction.setIcon({ path: grayIconPath, tabId: changeInfo.tabId });
+      chrome.action.setIcon({ path: grayIconPath, tabId: changeInfo.tabId });
     }
   });
 });
