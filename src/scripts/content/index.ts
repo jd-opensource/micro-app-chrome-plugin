@@ -75,6 +75,15 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         (microApp as HTMLElement).style.transform = 'rotate(360deg)';
         (microApp as HTMLElement).dataset.lighting = '1';
         (microApp as HTMLElement).dataset.lightingColor = color;
+        // 发送高亮状态更新消息
+        chrome.runtime.sendMessage({
+          type: 'lightingUpdate',
+          data: {
+            name: microApp.getAttribute('name'),
+            lighting: '1',
+            lightingColor: color,
+          },
+        });
       } else if (request.action === 'closeView') {
         const originalStyle = (window as unknown as CustomWindow).originalStyles.get(microApp); // get save elements
         if (originalStyle) {
@@ -84,6 +93,15 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         }
         delete (microApp as HTMLElement).dataset.lighting;
         delete (microApp as HTMLElement).dataset.lightingColor;
+        // 发送高亮状态更新消息
+        chrome.runtime.sendMessage({
+          type: 'lightingUpdate',
+          data: {
+            name: microApp.getAttribute('name'),
+            lighting: '0',
+            lightingColor: '',
+          },
+        });
       }
     }
   });

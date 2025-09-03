@@ -41,6 +41,22 @@ class Route extends React.PureComponent<RouteProps, RouteState> {
   };
 
   public componentDidMount(): void {
+    // 添加消息监听
+    chrome.runtime.onMessage.addListener((message) => {
+      if (message.type === 'lightingUpdate') {
+        const { name, lighting, lightingColor } = message.data;
+        this.setState(prevState => ({
+          lighting: {
+            ...prevState.lighting,
+            [name]: {
+              checked: lighting === '1',
+              color: lightingColor || 'red',
+            },
+          },
+        }));
+      }
+    });
+
     const {
       selectInfo,
     } = this.props;
