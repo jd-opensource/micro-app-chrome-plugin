@@ -24,7 +24,9 @@ class PopupPage extends React.PureComponent<PopupPageProps, PopupPageProps> {
             打开“子应用开发环境模拟”页面
           </a>
         </div> */}
-
+        <div className={styles['app-link']}>
+          <a>打开“子应用开发环境模拟”页面(v2版本暂不支持)</a>
+        </div>
       </div>
     );
   }
