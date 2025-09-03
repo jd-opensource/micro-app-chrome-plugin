@@ -13,12 +13,13 @@ chrome.contextMenus.create({
   contexts: ['page'],
 });
 // create child menu
-chrome.contextMenus.create({
-  title: '子应用开发环境模拟',
-  id: '1101',
-  parentId: '10',
-  contexts: ['page'],
-});
+// chrome.contextMenus.create({
+//   title: '子应用开发环境模拟',
+//   id: '1101',
+//   parentId: '10',
+//   contexts: ['page'],
+// });
+
 // create child menu
 chrome.contextMenus.create({
   title: '查看子应用范围',
@@ -48,7 +49,10 @@ chrome.contextMenus.onClicked.addListener(({ menuItemId }) => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       if (tabs[0]?.id) {
         const tabId = tabs[0].id;
-        chrome.tabs.executeScript(tabId, { file: 'content.js' }, () => {
+        chrome.scripting.executeScript({
+          target: { tabId },
+          files: ['content.js'],
+        }, () => {
           chrome.tabs.sendMessage(tabId, { action: 'openView' });
         });
       } else {
@@ -60,7 +64,10 @@ chrome.contextMenus.onClicked.addListener(({ menuItemId }) => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       if (tabs[0]?.id) {
         const tabId = tabs[0].id;
-        chrome.tabs.executeScript(tabId, { file: 'content.js' }, () => {
+        chrome.scripting.executeScript({
+          target: { tabId },
+          files: ['content.js'],
+        }, () => {
           chrome.tabs.sendMessage(tabId, { action: 'closeView' });
         });
       } else {
