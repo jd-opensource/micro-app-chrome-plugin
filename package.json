@@ -1,6 +1,6 @@
 {
   "name": "micro-app-chrome-extension",
-  "version": "0.0.1",
+  "version": "2.0.0",
   "description": "A chrome extension for debug micro app project.",
   "license": "MIT",
   "repository": {

@@ -38,7 +38,7 @@ export default function openDevToolsWindow(position: DevToolsPosition) {
         ...customOptions,
       };
       if (action === 'open') {
-        options.url = chrome.extension.getURL(
+        options.url = chrome.runtime.getURL(
           `${url}#${position.slice(position.indexOf('-') + 1)}`,
         );
         chrome.windows.create(options, (win) => {
