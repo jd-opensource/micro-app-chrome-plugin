@@ -7,7 +7,6 @@ import {
   DeleteOutlined,
   RedoOutlined,
 } from '@ant-design/icons';
-import jsxCustomEvent from '@micro-zoe/micro-app/polyfill/jsx-custom-event';
 import {
   Alert,
   Button,
@@ -24,12 +23,12 @@ import {
   Table,
   Typography,
 } from 'antd';
+import microApp1 from 'micro-app-v1';
+import jsxCustomEvent from 'micro-app-v1/polyfill/jsx-custom-event';
+import microApp08, { unmountAllApps } from 'micro-app-v08';
 import React from 'react';
 
 import { decodeJSON, encodeJSON } from '@/utils/json';
-
-import microApp1 from './js/microApp1.js';
-import microApp08, { unmountAllApps } from './js/microApp08.js';
 
 import styles from './index.module.less';
 
@@ -585,17 +584,13 @@ class SimulationPage extends React.PureComponent<SimulationPageProps, Simulation
             <Divider type="vertical" />
             <Button type="link" size="small" onClick={this.refresh} icon={<RedoOutlined rev={null} />}>刷新</Button>
           </Divider>
-          { ver.startsWith('1')
-            ? <div id="MicroApp" />
-            : (
-              <micro-app
-                className={styles.demo}
-                url={prefix + microAppUrl}
-                name="micro-app-demo"
-                data={data}
-                key={timeStr}
-              />
-            ) }
+          <micro-app
+            className={styles.demo}
+            url={prefix + microAppUrl}
+            name="micro-app-demo"
+            data={data}
+            key={timeStr}
+          />
         </Content>
       </Space>
     );

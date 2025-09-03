@@ -704,7 +704,7 @@ class CSSParser {
 
   // splice string
   recordResult(strFragment) {
-    // Firefox is slow when string contain special characters, see https://github.com/micro-zoe/micro-app/issues/256
+    // Firefox is slow when string contain special characters, see https://github.com/jd-opensource/micro-app/issues/256
     this.result += isFireFox() ? encodeURIComponent(strFragment) : strFragment;
   }
 }
@@ -1184,7 +1184,7 @@ function patchDocument() {
     if (!appName
             || !selectors
             || isUniqueElement(selectors)
-            // see https://github.com/micro-zoe/micro-app/issues/56
+            // see https://github.com/jd-opensource/micro-app/issues/56
             || rawDocument !== this) {
       return globalEnv.rawQuerySelector.call(this, selectors);
     }
@@ -2480,7 +2480,7 @@ class SandBox {
   constructor(appName, url) {
     /**
      * Scoped global Properties(Properties that can only get and set in microAppWindow, will not escape to rawWindow)
-     * https://github.com/micro-zoe/micro-app/issues/234
+     * https://github.com/jd-opensource/micro-app/issues/234
      */
     this.scopeProperties = ['webpackJsonp', 'Vue'];
     // Properties that can be escape to rawWindow

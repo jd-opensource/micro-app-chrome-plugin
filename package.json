@@ -1,6 +1,6 @@
 {
   "name": "micro-app-chrome-extension",
-  "version": "0.0.1",
+  "version": "2.0.0",
   "description": "A chrome extension for debug micro app project.",
   "license": "MIT",
   "repository": {
@@ -22,10 +22,11 @@
   "dependencies": {
     "@ant-design/icons": "^5.2.3",
     "@hot-loader/react-dom": "^17.0.2",
-    "@micro-zoe/micro-app": "^0.8.10",
     "antd": "^5.8.0",
     "classnames": "^2.3.2",
     "lodash": "^4.17.21",
+    "micro-app-v1": "npm:@micro-zoe/micro-app@^1.0.0-rc.24",
+    "micro-app-v08": "npm:@micro-zoe/micro-app@^0.8.10",
     "moment": "^2.29.4",
     "path-browserify": "^1.0.1",
     "querystringify": "^2.2.0",
