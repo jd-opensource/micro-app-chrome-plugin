@@ -30,6 +30,7 @@
   "devtools_page": "devtools-loader.html",
   "permissions": [
     "cookies",
+    "webRequest",
     "tabs",
     "contextMenus",
     "storage",

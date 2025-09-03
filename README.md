@@ -14,9 +14,9 @@
 在chrome中输入`chrome://extensions`打开扩展程序，打开[插件下载地址](https://github.com/jd-opensource/micro-app-chrome-plugin/releases)，选择最新Release包的`micro-app-chrome-plugin.zip`
 文件下载，无需解压，将已下载的插件拖入。
 
-在 仅支持 Manifest V3 扩展的 Chrome 139+ 浏览器上，请使用 Micro-App-DevTools 插件 V2 版本。
+在仅支持 `Manifest V3` 扩展的 Chrome 139+ 浏览器上，请使用 `Micro-App-DevTools V2+` 版本。
 
-> 注：若仍需使用插件 V1 版本，请在仍支持 Manifest V2 拓展的 Chrome 138 或更早版本浏览器的地址栏输入 chrome://flags/#allow-legacy-mv2-extensions 并启用 允许加载旧版 Manifest V2 扩展。![扩展程序](https://zeromock.s3.cn-north-1.jdcloud-oss.com/micro-app/mv2.png)
+> 注：若仍需使用`Micro-App-DevTools V1+`版本，请在仍支持 `Manifest V2` 拓展的 Chrome 138 或更早版本浏览器的地址栏输入 `chrome://flags/#allow-legacy-mv2-extensions` 并启用允许加载旧版 `Manifest V2` 扩展选项。![扩展程序](https://zeromock.s3.cn-north-1.jdcloud-oss.com/micro-app/mv2.png)
 
 ![扩展程序](https://img12.360buyimg.com/imagetools/jfs/t1/119438/16/38287/53001/646b50e3F9012f2e8/3bba9844bbb1431b.png)
 
